@@ -24,7 +24,7 @@ public class Diretor extends CargoDeConfianca{
     // função get - trazendo o valor get
     @Override
     public double getSalarioFinal() {
-        return (salarioBase + salarioBase * PREMIO * bonificacao.DIRETOR.valor);
+        return (super.salarioBase + super.salarioBase * PREMIO + super.salarioBase * bonificacao.valor);
     }
     
     

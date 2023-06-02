@@ -18,6 +18,6 @@ public enum Bonificacao {
     public double getValor() {
         return valor;
     }
-
+    
     
 }

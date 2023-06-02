@@ -17,12 +17,19 @@ public class Motoboy extends Funcionario{
     // função get - trazendo o valor get
     @Override
     public double getSalarioFinal() {
-        return salarioBase;
+        return super.salarioBase;
     }
     
     public void getPlacaDeMoto(String placaDeMoto) {
         this.placaDeMoto = placaDeMoto;
     }
+    
+    //função set - para permitir que o usuário faça alterações nas informações
+    public void setPlacaDeMoto(String placaDeMoto) {
+        this.placaDeMoto = placaDeMoto;
+    }
+    
+    
 
     // função to String - para facilitar o que será exibido na tela
     @Override
