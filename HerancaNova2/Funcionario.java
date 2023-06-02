@@ -1,9 +1,10 @@
 package HerancaNova2;
 
+// import - para poder utilizar recursos específicos
 import java.time.LocalDate;
-
+// abstract para classe primária
 public abstract class Funcionario {
-    
+    // atributos e seus valores
     protected String nome;
     protected String cpf;
     protected String rg;
@@ -12,6 +13,7 @@ public abstract class Funcionario {
     protected double salarioBase;
     protected LocalDate dataAdmissao;
 
+    // função construct
     public Funcionario(String nome, String cpf, String rg, Genero genero, Setor setor, double salarioBase, LocalDate dataAdmissao) {
         this.nome = nome;
         this.cpf = cpf;
@@ -22,8 +24,8 @@ public abstract class Funcionario {
         this.dataAdmissao = dataAdmissao;
     }
     
+    // função get - para endereçar e linkar as informações
     public abstract double getSalarioFinal(); // obrigando a implementar
-
 
     public String getNome() {
         return nome;
@@ -53,7 +55,8 @@ public abstract class Funcionario {
         return dataAdmissao;
     }
 
-    @Override
+    // função to String - para facilitar o que será exibido na tela
+    @Override // overrive - pode mudar
     public String toString() {
         return 
                 "\n Nome: " + nome + 
@@ -61,9 +64,9 @@ public abstract class Funcionario {
                 "\n RG: " + rg + 
                 "\n Gênero: " + genero.getSexo() + 
                 "\n Setor: " + setor.getNome() + 
-                "\n Salário Base: " + salarioBase + 
+                "\n Salário Base: R$" + salarioBase + 
                 "\n Data de Admissão: " + dataAdmissao +
-                "Salário Final: " + getSalarioFinal();
+                "\n Salário Final: R$" + getSalarioFinal();
         
     }
     
